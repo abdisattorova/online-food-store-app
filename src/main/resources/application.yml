@@ -10,6 +10,14 @@ spring:
     password: ${DB_PASSWORD:root123}
     hikari:
       maximum-pool-size: 10
+#JPA
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
 #REDIS
 redis:
   cache:
@@ -20,14 +28,6 @@ redis:
       products: 30
       users: 30
 
-  #JPA
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-    properties:
-      hibernate:
-        format_sql: true
 #LOG
 logging:
   level:
