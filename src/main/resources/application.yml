@@ -1,0 +1,42 @@
+server:
+  port: 8080
+
+#DATABASE
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/food_store
+    username: postgres
+    password: root123
+    hikari:
+      maximum-pool-size: 10
+  #REDIS
+  cache:
+    type: redis
+    host: localhost
+    port: 6379
+    redis:
+      time-to-live: 60000
+
+  #JPA
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+#LOG
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+  file:
+    name: log.log
+
+#SWAGGER
+springfox:
+  documentation:
+    swagger-ui:
+      enabled: true

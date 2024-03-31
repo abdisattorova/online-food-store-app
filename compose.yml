@@ -1,0 +1,19 @@
+version: '3'
+services:
+  postgres:
+    image: online-food-store-app
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: food_store
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+
+  spring-boot-app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://online-food-store-app:5432/food_store
+      SPRING_DATASOURCE_USERNAME: admin
+      SPRING_DATASOURCE_PASSWORD: admin123
