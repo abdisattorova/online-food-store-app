@@ -57,19 +57,7 @@ To get started with the project, follow these steps:
     ```bash
     docker-compose up
     ```
-
-#### Using Docker Hub Image
-
-1. Pull the Docker image from Docker Hub:
-    ```bash
-    docker pull dockersevinch02/online-food-store-app:1
-    ```
-
-2. Run the Docker container:
-    ```bash
-    docker run -d -p 9001:8080 dockersevinch02/online-food-store-app:1
-    ```
-
+    
 ### Testing Users
 
 For testing purposes, there are two users:
